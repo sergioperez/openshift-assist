@@ -27,49 +27,49 @@ set /p password=Password:
 
 for /f "tokens=*" %%h in (%MASTER_LIST%) do (
   :: Create folder to download files
-  echo mkdir retrieved_files/%%h
-  echo mkdir retrieved_files/%%h/master
-  echo mkdir retrieved_files/%%h/cloudprovider
+  mkdir retrieved_files/%%h
+  mkdir retrieved_files/%%h/master
+  mkdir retrieved_files/%%h/cloudprovider
 
   :: Download files
-  echo pscp.exe -pw %password% %username%@%%h:/etc/origin/master/*.yaml retrieved_files/%%h/master
-  echo pscp.exe -pw %password% %username%@%%h:/etc/origin/cloudprovider/*.yaml retrieved_files/%%h/cloudprovider
+  pscp.exe -pw %password% %username%@%%h:/etc/origin/master/*.yaml retrieved_files/%%h/master
+  pscp.exe -pw %password% %username%@%%h:/etc/origin/cloudprovider/*.yaml retrieved_files/%%h/cloudprovider
 )
-pause
+:: pause
 
 for /f "tokens=*" %%h in (%WORKER_LIST%) do (
   :: Create folder to download files
-  echo mkdir retrieved_files/%%h
-  echo mkdir retrieved_files/%%h/master
-  echo mkdir retrieved_files/%%h/cloudprovider
+  mkdir retrieved_files/%%h
+  mkdir retrieved_files/%%h/master
+  mkdir retrieved_files/%%h/cloudprovider
 
   :: Download files
-  echo pscp.exe -pw %password% %username%@%%h:/etc/origin/master/*.yaml retrieved_files/%%h/master
-  echo pscp.exe -pw %password% %username%@%%h:/etc/origin/cloudprovider/*.yaml retrieved_files/%%h/cloudprovider
+  pscp.exe -pw %password% %username%@%%h:/etc/origin/master/*.yaml retrieved_files/%%h/master
+  pscp.exe -pw %password% %username%@%%h:/etc/origin/cloudprovider/*.yaml retrieved_files/%%h/cloudprovider
 )
-pause
+:: pause
 
 for /f "tokens=*" %%h in (%INFRA_LIST%) do (
   :: Create folder to download files
-  echo mkdir retrieved_files/%%h
-  echo mkdir retrieved_files/%%h/master
-  echo mkdir retrieved_files/%%h/cloudprovider
+  mkdir retrieved_files/%%h
+  mkdir retrieved_files/%%h/master
+  mkdir retrieved_files/%%h/cloudprovider
 
   :: Download files
-  echo pscp.exe -pw %password% %username%@%%h:/etc/origin/master/*.yaml retrieved_files/%%h/master
-  echo pscp.exe -pw %password% %username%@%%h:/etc/origin/cloudprovider/*.yaml retrieved_files/%%h/cloudprovider
+  pscp.exe -pw %password% %username%@%%h:/etc/origin/master/*.yaml retrieved_files/%%h/master
+  pscp.exe -pw %password% %username%@%%h:/etc/origin/cloudprovider/*.yaml retrieved_files/%%h/cloudprovider
 
 )
-pause
+:: pause
 
 for /f "tokens=*" %%h in (%GLUSTER_LIST%) do (
   :: Create folder to download files
-  echo mkdir retrieved_files/%%h
-  echo mkdir retrieved_files/%%h/master
-  echo mkdir retrieved_files/%%h/cloudprovider
+  mkdir retrieved_files/%%h
+  mkdir retrieved_files/%%h/master
+  mkdir retrieved_files/%%h/cloudprovider
 
   :: Download files
-  echo pscp.exe -pw %password% %username%@%%h:/etc/origin/master/*.yaml retrieved_files/%%h/master
-  echo pscp.exe -pw %password% %username%@%%h:/etc/origin/cloudprovider/*.yaml retrieved_files/%%h/cloudprovider
+  pscp.exe -pw %password% %username%@%%h:/etc/origin/master/*.yaml retrieved_files/%%h/master
+  pscp.exe -pw %password% %username%@%%h:/etc/origin/cloudprovider/*.yaml retrieved_files/%%h/cloudprovider
 )
-pause
+:: pause
